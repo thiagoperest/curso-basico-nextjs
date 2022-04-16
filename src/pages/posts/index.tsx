@@ -12,7 +12,7 @@ interface PostsProps {
 export default function Posts({ posts }: PostsProps) {
   return (
     <div>
-      <h1>Listagem de Posts</h1>;
+      <h1>Listagem de Posts</h1>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>{post.title}</li>
@@ -30,5 +30,6 @@ export const getStaticProps: GetStaticProps<PostsProps> = async () => {
     props: {
       posts,
     },
+    revalidate: 5,
   };
 };

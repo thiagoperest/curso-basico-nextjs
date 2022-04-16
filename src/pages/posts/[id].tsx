@@ -1,5 +1,10 @@
 import { useRouter } from "next/router";
 
+interface Comment {
+  id: string;
+  body: string;
+}
+
 export default function Post() {
   const router = useRouter();
   return (
