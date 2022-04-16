@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO";
 
 interface Post {
   id: string;
@@ -11,18 +12,9 @@ interface HomeProps {
 }
 
 export default function Home({ posts }: HomeProps) {
-  // const [posts, setPosts] = useState<Post[]>([]);
-
-  // useEffect(() => {
-  //   fetch("http://localhost:3333/posts").then((response) => {
-  //     response.json().then((data) => {
-  //       setPosts(data);
-  //     });
-  //   });
-  // }, []);
-
   return (
     <div>
+      <SEO title="Home" />
       <h1>Posts</h1>
       <ul>
         {posts.map((post) => (
