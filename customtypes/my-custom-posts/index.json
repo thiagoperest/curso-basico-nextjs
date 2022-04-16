@@ -12,7 +12,7 @@
           "placeholder": ""
         }
       },
-      "teste": {
+      "title": {
         "type": "StructuredText",
         "config": {
           "label": "title",
